@@ -134,4 +134,6 @@ dmypy.json
 config.py
 api_keys.py
 .DS_Store
+**config
 **config.py
+
