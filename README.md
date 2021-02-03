@@ -1,6 +1,6 @@
 # leaflet-challenge
 
-earthquake mapping with geojason
+earthquake mapping with geojson
 
 **Level One (complete):**
 
