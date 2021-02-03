@@ -1,7 +1,7 @@
 // Create a map object
 var myMap = L.map("map", {
-  center: [37.09, -95.71],
-  zoom: 4
+  center: [21.3068, -157.7912],
+  zoom: 2.45
 });
 
 // Adding tile layer to the map
@@ -18,42 +18,48 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // // API  EARTHQUAKE
 var link = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson";
 
-
+// controls the colors of the dots (paired to MAG)
 function earthQuakeColor (mag){
   if (mag>90)
   return "purple"
   if (mag>70)
-  return "red"
+  return "DarkRed"
   else if (mag>50)
-  return "orange"
+  return "OrangeRed"
   else if (mag>30)
-  return "yellow"
+  return "Gold"
   else if (mag>10)
-  return "white"
+  return "GreenYellow"
   else 
-  return "green"
+  return "Green"
 }
 
 // Grab the data with d3
 d3.json(link).then(function(data) {
   console.log(data);
 
-  // Build flags
+  // // Build MARKERS
+  // (currently flags only appear when CLICKed)
+  
+  // code sets text on flag
+  // set to display MAG 
   L.geoJson(data, {
     onEachFeature: function(feature, layer){
+      var myDate = new Date(feature.properties.time);
       layer.bindPopup(
-        feature.properties.place+"<hr> Magnitude: "+
-        feature.properties.mag
-
-
+        feature.properties.place+
+        "<hr> Time: "+ myDate.toGMTString()+
+        "<br> Magnitude: "+ feature.properties.mag+
+        "<br> Depth: "+ feature.geometry.coordinates[2]
       )
     },
-  
+  // set FLAG STYLE
+  // color set to DEPTH
   style: function(feature){
     return {
-    color : "black",
-    radius : feature.properties.mag*4,
-    fillOpacity : 0.5,
+    color : earthQuakeColor(feature.geometry.coordinates[2]),
+    radius : feature.properties.mag*3,
+    fillOpacity : 0.75,
     fillColor : earthQuakeColor(feature.geometry.coordinates[2])
   }
   },
@@ -75,7 +81,7 @@ d3.json(link).then(function(data) {
           magnitudes = [-10, 10, 30, 50, 70, 90],
           labels = [];
   
-      // loop through our density intervals and generate a label with a colored square for each interval
+      // loop through magnitudes and create legend colors
       for (var i = 0; i < magnitudes.length; i++) {
           div.innerHTML +=
               '<i style="background:' + earthQuakeColor (magnitudes[i] + 1) + '"></i> ' +
@@ -87,13 +93,6 @@ d3.json(link).then(function(data) {
   
   legend.addTo(myMap);
 
-
-  // data.forEach(function(data) {
-  //   var lat = data.features.geometry.coordinates;
-  //   var lng = 
-  //   if (location) {
-  //     L.marker([location.coordinates[1], location.coordinates[0]]).addTo(myMap);
-  //   }
   });
 
 
