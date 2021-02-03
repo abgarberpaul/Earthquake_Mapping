@@ -9,14 +9,6 @@ All files to run the functioning Level One page are stored in Leaflet-Step-1 fol
     * See css folder for style.css
     * See js folder for config.js (main code)
 
-All files to run the functioning Level Two page are stored in Leaflet-Step-2 folder. 
-    * index.html 
-    * See css folder for style.css
-    * See js folder for config.js (main code)
-    * Js folder also contains choropleth.js file
-
-**Required Items for Level One**
-
 1. Call the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) 
 
 2. Create a map using Leaflet that plots all of the earthquate data
@@ -27,4 +19,18 @@ All files to run the functioning Level Two page are stored in Leaflet-Step-2 fol
 
 5. Create a legend that will provide context for your map data.
 
-**Required Items for Level One**
+**Level Two (complete)**
+All files to run the functioning Level Two page are stored in Leaflet-Step-2 folder. 
+    * index.html 
+    * See css folder for style.css
+    * See js folder for config.js (main code)
+    * Js folder also contains choropleth.js file
+
+1. Call the source for tectonic plate coordinates in GeoJSON
+
+2. Create a choropleth layer with tectonic plate data
+
+3. Create responsive layer for adding or removing both tectonic plate data and earthquake data
+
+4. Create responsive optional base layers for viewing map (three demonstrated- standard, gray and satellite)
+
