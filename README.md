@@ -4,10 +4,15 @@ earthquake mapping with geojson
 
 **Level One (complete):**
 
-All files to run the functioning Level One page are stored in Leaflet-Step-1 folder. 
-    * index.html 
-    * See css folder for style.css
-    * See js folder for config.js (main code)
+All files to run the functioning Level One page are stored in Leaflet-Step-1 folder: 
+
+    - index.html
+    
+    - See css folder for style.css
+    
+    - See js folder for config.js (main code)
+
+__Required Elements, level one:__
 
 1. Call the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) 
 
@@ -21,11 +26,17 @@ All files to run the functioning Level One page are stored in Leaflet-Step-1 fol
 
 **Level Two (complete)**
 
-All files to run the functioning Level Two page are stored in Leaflet-Step-2 folder. 
-    * index.html 
-    * See css folder for style.css
-    * See js folder for config.js (main code)
-    * Js folder also contains choropleth.js file
+All files to run the functioning Level Two page are stored in Leaflet-Step-2 folder: 
+    
+    - index.html 
+    
+    - See css folder for style.css
+    
+    - See js folder for config.js (main code)
+    
+    - Js folder also contains choropleth.js file
+
+__Required Elements, level two:__
 
 1. Call the source for tectonic plate coordinates in GeoJSON
 
