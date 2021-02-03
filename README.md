@@ -4,10 +4,16 @@ earthquake mapping with geojason
 
 **Level One (complete):**
 
-All files to run the functioning Level One page are stored in Leaflet-Step-1 folder
+All files to run the functioning Level One page are stored in Leaflet-Step-1 folder. 
     * index.html 
     * See css folder for style.css
     * See js folder for config.js (main code)
+
+All files to run the functioning Level Two page are stored in Leaflet-Step-2 folder. 
+    * index.html 
+    * See css folder for style.css
+    * See js folder for config.js (main code)
+    * Js folder also contains choropleth.js file
 
 **Required Items for Level One**
 
@@ -20,3 +26,5 @@ All files to run the functioning Level One page are stored in Leaflet-Step-1 fol
 4. Include popups that provide additional information about the earthquake when a marker is clicked.
 
 5. Create a legend that will provide context for your map data.
+
+**Required Items for Level One**
