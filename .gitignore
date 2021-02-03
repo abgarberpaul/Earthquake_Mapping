@@ -130,6 +130,7 @@ dmypy.json
 
 
 # MY ADDS- 
+**.ipynb_checkpoints
 .ipynb_checkpoints
 config.py
 api_keys.py
