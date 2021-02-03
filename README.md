@@ -20,6 +20,7 @@ All files to run the functioning Level One page are stored in Leaflet-Step-1 fol
 5. Create a legend that will provide context for your map data.
 
 **Level Two (complete)**
+
 All files to run the functioning Level Two page are stored in Leaflet-Step-2 folder. 
     * index.html 
     * See css folder for style.css
