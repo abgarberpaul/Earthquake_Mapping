@@ -1,4 +1,5 @@
-# leaflet-challenge
+# Earthquake Mapping
+## a leaflet challenge
 
 earthquake mapping with geojson
 
